@@ -15,9 +15,7 @@ public class CarroService {
     CarroRepository carroRepository;
 
     @Transactional
-    public CarroModel save(CarroModel carroModel){
-        return carroRepository.save(carroModel);
-    }
+    public CarroModel save(CarroModel carroModel){ return carroRepository.save(carroModel); }
 
     public boolean existsByMarca(String marca){
         return carroRepository.existsByMarca(marca);
@@ -27,10 +25,7 @@ public class CarroService {
         return carroRepository.existsByModelo(modelo);
     }
 
-    public boolean existsByPlaca(String placa){
-        return carroRepository.existsByPlaca(placa);
-    }
-
+    public boolean existsByPlaca(String placa){ return carroRepository.existsByPlaca(placa); }
 
     public boolean existsByStatus(String status){
         return carroRepository.existsByStatus(status);

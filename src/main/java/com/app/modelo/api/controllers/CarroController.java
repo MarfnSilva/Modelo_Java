@@ -31,10 +31,7 @@ public class CarroController {
         if(carroService.existsByPlaca(carroDto.getPlaca())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflito: Placa já cadastrada no Sistema");
         }
-//        Optional<MotoristaModel> motoristaModelOptional = motoristaService.findById(carroDto.getMotorista().getId());
-//        if(motoristaModelOptional.isEmpty()){
-//            return ResponseEntity.status(HttpStatus.OK).body("Motorista não encontrado");
-//        }
+
         var carroModel = new CarroModel();
         BeanUtils.copyProperties(carroDto, carroModel);
         return ResponseEntity.status(HttpStatus.OK).body(carroService.save(carroModel));

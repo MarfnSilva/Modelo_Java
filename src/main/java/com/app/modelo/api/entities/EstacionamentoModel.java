@@ -68,13 +68,9 @@ public class EstacionamentoModel implements Serializable {
         this.preco = preco;
     }
 
-    public String getVaga() {
-        return vaga;
-    }
+    public String getVaga() { return vaga; }
 
-    public void setVaga(String vaga) {
-        this.vaga = vaga;
-    }
+    public void setVaga(String vaga) { this.vaga = vaga; }
 
     public StatusEstacionamento getStatus() {
         return status;
@@ -87,6 +83,7 @@ public class EstacionamentoModel implements Serializable {
     public CarroModel getCarro() {
         return carro;
     }
+
     public void setCarro(CarroModel carro) {
         this.carro = carro;
     }

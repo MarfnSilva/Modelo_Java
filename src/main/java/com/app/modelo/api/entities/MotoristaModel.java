@@ -12,6 +12,7 @@ import java.io.Serializable;
 public class MotoristaModel implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +24,6 @@ public class MotoristaModel implements Serializable {
     @Column(nullable = false)
     @Enumerated(EnumType.ORDINAL)
     private StatusMotorista status;
-
 
     public MotoristaModel(){
     }
@@ -52,11 +52,7 @@ public class MotoristaModel implements Serializable {
         this.cpf = cpf;
     }
 
-    public StatusMotorista getStatus() {
-        return status;
-    }
+    public StatusMotorista getStatus() { return status; }
 
-    public void setStatus(StatusMotorista status) {
-        this.status = status;
-    }
+    public void setStatus(StatusMotorista status) { this.status = status; }
 }

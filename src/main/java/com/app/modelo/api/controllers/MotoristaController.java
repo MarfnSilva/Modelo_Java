@@ -21,8 +21,6 @@ import java.util.Optional;
 public class MotoristaController {
     @Autowired
     private MotoristaService motoristaService;
-//    @Autowired
-//    private CarroService carroService;
 
     @PostMapping
     public ResponseEntity<Object> saveMotorista(@RequestBody @Valid MotoristaDto motoristaDto){
