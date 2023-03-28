@@ -1,6 +1,7 @@
 package com.app.modelo.api.entities;
 
 import com.app.modelo.api.dtos.CarroDto;
+import com.app.modelo.api.enums.StatusCarro;
 import jakarta.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,7 +24,9 @@ public class CarroModel implements Serializable {
 
     private String placa;
 
-    private String status;
+    @Column(nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private StatusCarro status;
 
     @ManyToOne
     @JoinColumn(name = "motorista_id")
@@ -64,11 +67,11 @@ public class CarroModel implements Serializable {
         this.placa = placa;
     }
 
-    public String getStatus() {
+    public StatusCarro getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusCarro status) {
         this.status = status;
     }
 

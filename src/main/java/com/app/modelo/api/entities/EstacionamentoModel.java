@@ -1,5 +1,6 @@
 package com.app.modelo.api.entities;
 
+import com.app.modelo.api.enums.StatusEstacionamento;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -22,7 +23,11 @@ public class EstacionamentoModel implements Serializable {
 
     private String preco;
 
-    private String status;
+    private String vaga;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private StatusEstacionamento status;
 
     @ManyToOne
     @JoinColumn(name = "carro_id")
@@ -63,11 +68,19 @@ public class EstacionamentoModel implements Serializable {
         this.preco = preco;
     }
 
-    public String getStatus() {
+    public String getVaga() {
+        return vaga;
+    }
+
+    public void setVaga(String vaga) {
+        this.vaga = vaga;
+    }
+
+    public StatusEstacionamento getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEstacionamento status) {
         this.status = status;
     }
 

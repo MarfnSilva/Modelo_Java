@@ -33,6 +33,8 @@ public class EstacionamentoService {
         return estacionamentoRepository.existsByPreco(preco);
     }
 
+    public boolean existsByVaga(String vaga){return  estacionamentoRepository.existsByVaga(vaga);}
+
     public boolean existsByStatus(String status){
         return estacionamentoRepository.existsByStatus(status);
     }

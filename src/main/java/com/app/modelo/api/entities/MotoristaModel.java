@@ -1,5 +1,6 @@
 package com.app.modelo.api.entities;
 
+import com.app.modelo.api.enums.StatusMotorista;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.apache.logging.log4j.message.AsynchronouslyFormattable;
@@ -19,11 +20,10 @@ public class MotoristaModel implements Serializable {
 
     private String cpf;
 
-    private String status;
+    @Column(nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private StatusMotorista status;
 
-//    @ManyToOne
-//    @JoinColumn(name = "carro_id")
-//    private CarroModel carroModel;
 
     public MotoristaModel(){
     }
@@ -52,19 +52,11 @@ public class MotoristaModel implements Serializable {
         this.cpf = cpf;
     }
 
-    public String getStatus() {
+    public StatusMotorista getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusMotorista status) {
         this.status = status;
     }
-
-//    public CarroModel getCarroModel() {
-//        return carroModel;
-//    }
-//
-//    public void setCarroModel(CarroModel carroModel) {
-//        this.carroModel = carroModel;
-//    }
 }

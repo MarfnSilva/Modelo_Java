@@ -1,6 +1,7 @@
 package com.app.modelo.api.dtos;
 
 import com.app.modelo.api.entities.CarroModel;
+import com.app.modelo.api.enums.StatusMotorista;
 
 public class MotoristaDto {
 
@@ -8,9 +9,8 @@ public class MotoristaDto {
 
     private String cpf;
 
-    private String status;
+    private StatusMotorista status;
 
-//    private CarroModel carroModel;
 
     public String getNome() {
         return nome;
@@ -28,19 +28,11 @@ public class MotoristaDto {
         this.cpf = cpf;
     }
 
-    public String getStatus() {
+    public StatusMotorista getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusMotorista status) {
         this.status = status;
     }
-
-//    public CarroModel getCarroModel() {
-//        return carroModel;
-//    }
-//
-//    public void setCarroModel(CarroModel carroModel) {
-//        this.carroModel = carroModel;
-//    }
 }

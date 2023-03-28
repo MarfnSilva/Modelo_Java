@@ -14,5 +14,7 @@ public interface EstacionamentoRepository  extends JpaRepository<EstacionamentoM
 
     boolean existsByPreco(String preco);
 
+    boolean existsByVaga(String vaga);
+
     boolean existsByStatus(String status);
 }

@@ -1,6 +1,7 @@
 package com.app.modelo.api.dtos;
 
 import com.app.modelo.api.entities.MotoristaModel;
+import com.app.modelo.api.enums.StatusCarro;
 
 public class CarroDto {
 
@@ -10,7 +11,7 @@ public class CarroDto {
 
     private String placa;
 
-    private String status;
+    private StatusCarro status;
 
     private MotoristaModel motorista;
 
@@ -38,11 +39,11 @@ public class CarroDto {
         this.placa = placa;
     }
 
-    public String getStatus() {
+    public StatusCarro getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusCarro status) {
         this.status = status;
     }
 

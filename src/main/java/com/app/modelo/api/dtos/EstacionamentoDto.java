@@ -1,6 +1,7 @@
 package com.app.modelo.api.dtos;
 
 import com.app.modelo.api.entities.CarroModel;
+import com.app.modelo.api.enums.StatusEstacionamento;
 import net.bytebuddy.asm.Advice;
 
 import java.time.LocalDateTime;
@@ -13,7 +14,9 @@ public class EstacionamentoDto {
 
     private String preco;
 
-    private String status;
+    private String vaga;
+
+    private StatusEstacionamento status;
 
     private CarroModel carro;
 
@@ -41,11 +44,19 @@ public class EstacionamentoDto {
         this.preco = preco;
     }
 
-    public String getStatus() {
+    public String getVaga() {
+        return vaga;
+    }
+
+    public void setVaga(String vaga) {
+        this.vaga = vaga;
+    }
+
+    public StatusEstacionamento getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEstacionamento status) {
         this.status = status;
     }
 
