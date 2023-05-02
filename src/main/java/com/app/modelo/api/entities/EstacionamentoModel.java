@@ -1,8 +1,9 @@
 package com.app.modelo.api.entities;
 
 import com.app.modelo.api.enums.StatusEstacionamento;
-import jakarta.persistence.*;
 
+
+import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;

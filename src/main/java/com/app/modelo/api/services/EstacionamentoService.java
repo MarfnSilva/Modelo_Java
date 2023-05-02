@@ -3,11 +3,12 @@ package com.app.modelo.api.services;
 import com.app.modelo.api.entities.CarroModel;
 import com.app.modelo.api.entities.EstacionamentoModel;
 import com.app.modelo.api.repository.EstacionamentoRepository;
-import jakarta.transaction.Transactional;
+
 import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;

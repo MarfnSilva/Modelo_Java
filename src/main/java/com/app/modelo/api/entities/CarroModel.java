@@ -2,9 +2,10 @@ package com.app.modelo.api.entities;
 
 import com.app.modelo.api.dtos.CarroDto;
 import com.app.modelo.api.enums.StatusCarro;
-import jakarta.persistence.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 

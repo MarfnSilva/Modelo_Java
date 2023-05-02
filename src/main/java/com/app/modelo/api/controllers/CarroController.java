@@ -6,13 +6,14 @@ import com.app.modelo.api.entities.CarroModel;
 import com.app.modelo.api.entities.MotoristaModel;
 import com.app.modelo.api.services.CarroService;
 import com.app.modelo.api.services.MotoristaService;
-import jakarta.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 

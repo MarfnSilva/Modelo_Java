@@ -2,10 +2,11 @@ package com.app.modelo.api.services;
 
 import com.app.modelo.api.entities.MotoristaModel;
 import com.app.modelo.api.repository.MotoristaRepository;
-import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
